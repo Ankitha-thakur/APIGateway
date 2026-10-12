@@ -1,15 +1,13 @@
 server:
-    port: 8085
+  port: 8085
 
 spring:
-    cloud:
-        gateway:
-            server:
-                webmvc:
-                    routes:
-                        - id: rider-service
-
-                          uri: https://riderservice.onrender.com
-
-                          predicates:
-                              - Path=/rider/**
+  cloud:
+    gateway:
+      server:
+        webmvc:
+          routes:
+            - id: rider-service
+              uri: https://riderservice.onrender.com
+              predicates:
+                - Path=/rider/**
